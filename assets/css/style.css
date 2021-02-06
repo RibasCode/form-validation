@@ -1,0 +1,497 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@400;700&display=swap');
+
+:root{
+    --primaryColor: #ff4655;
+    --secondaryColor: #0f1923;
+
+    --whiteColor: #fff;
+    --darkColor: #111;
+    --lightDarkColor: #222;
+    --neutralColor: #9c9c9c;
+
+    --primaryBackgroundColor: #fcf8f0;
+    --secondaryBackgroundColor: #f2eee6;
+
+    --primaryTipyngColor: #0f1923;
+    --negativeTipyngColor: #fff;
+
+    --tipyngTitle: 'Raleway', sans-serif;
+    --tipyngText: 'Open Sans', sans-serif;
+    --textSize15: 15px;
+    --textSize14: 14px;
+    --textSize12: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: var(--tipyngText);
+    font-size: var(--textSize15);
+
+    background-color: var(--primaryBackgroundColor);
+}
+
+/* Animacio dark theme */
+body *{
+    transition: 0.4s;
+}
+
+::selection {
+    background-color: #9C9C9C;
+
+    color: inherit;
+}
+
+p {
+    line-height: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/*--------------------------------------------------------------
+# Btn's
+--------------------------------------------------------------*/
+
+
+.primary-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: max-content;
+
+    padding: 14px 60px;
+
+    background-color: transparent;
+
+    color: var(--primaryTipyngColor);
+    font-family: var(--tipyngTitle);
+    font-weight: 800;
+    font-size: var(--textSize14);
+       
+    border: solid 1px var(--primaryColor);
+    
+    cursor: pointer;
+    outline:none;
+    user-select: none;
+
+    /* How to remove blue highlight when tapping links in mobile */
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+    transition: all 0.2s ease;
+}
+
+.primary-btn:hover {
+    color: var(--whiteColor);
+    background-color: var(--primaryColor);
+    border: solid 1px var(--primaryColor);
+
+    transform: translate(0%, -6px);
+}
+
+
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: 100vh;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+}
+
+
+/*--------------------------------------------------------------
+# Contact - Form
+--------------------------------------------------------------*/
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+    height: 100%;
+}
+
+
+/*--------------------------------------------------------------
+# Contact - Form - Camps Agrupats
+--------------------------------------------------------------*/
+
+
+.form__group-name-company {
+    position: relative;
+
+    display: flex;
+
+    width: 100%;
+    height: 50px;
+
+    margin-bottom: 30px;
+}
+
+
+/*--------------------------------------------------------------
+# Contact - Form - Inputs
+--------------------------------------------------------------*/
+
+
+.form__name {
+    position: relative;
+    
+    width: 50%;
+    height: 50px;
+
+    margin-right: 25px;
+
+    overflow: hidden;
+}
+
+.form__company {
+    position: relative;
+
+    width: 50%;
+    height: 50px;
+
+    margin-left: 25px;
+
+    overflow: hidden;
+}
+
+.form__e-mail {
+    position: relative;
+
+    width: 100%;
+    height: 50px;
+
+    overflow: hidden;
+}
+
+.form__input {
+    width: 100%;
+    height: 100%;
+
+    padding-top: 20px;
+
+    background: var(--primaryBackgroundColor);
+
+    color: var(--primaryTipyngColor);
+    font-size: var(--textSize15);
+
+    border: none;
+
+    outline: none;
+}
+
+
+/*--------------------------------------------------------------
+# Contact - Form - Textarea
+--------------------------------------------------------------*/
+
+
+.form__message{
+    position: relative;
+
+    width: 100%;
+    height: 87px;
+
+    margin-bottom: 40px;
+
+    overflow: hidden;
+}
+
+.form__textarea {
+    width: 100%;
+    height: 100%;
+
+    padding-top: 40px;
+
+    background: var(--primaryBackgroundColor);
+
+    color: var(--primaryTipyngColor);
+    font-family: var(--tipyngText);
+    font-size: var(--textSize15);
+
+    border: none;
+    overflow: auto;
+    outline: none;
+    resize: none;
+
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+.form__textarea:first-letter {
+
+    text-transform: capitalize
+
+}
+
+/*--------------------------------------------------------------
+# Contact - Form - Checkbox
+--------------------------------------------------------------*/
+
+
+.form__check-privacy{
+    position: relative;
+    display: flex;
+
+    height: 100%;
+    width: 100%;
+
+    margin-bottom: 70px;
+}
+
+.form__checkbox {
+    position: relative;
+    display: inline-block;
+    
+	padding: 9px;
+
+    background-color: var(--primaryBackgroundColor);
+    
+	border: 1px solid var(--primaryColor);
+
+    cursor: pointer;
+
+    -webkit-appearance: none;
+    outline: none;
+}
+
+.form__checkbox:checked {
+    background-color: var(--primaryColor);
+
+    color: #99a1a7;
+    
+	border: 1px solid var(--primaryColor);
+}
+
+.form__checkbox:checked:after {
+    content: '\2714';
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    color: var(--whiteColor);
+	font-size: 12px;
+}
+
+.form__span{
+    color: var(--primaryTipyngColor);
+    margin-left: 8px;
+}
+
+.form__a{
+    color: var(--primaryTipyngColor);
+}
+
+.form__a:hover{
+    text-decoration-line: underline;
+}
+
+
+/*--------------------------------------------------------------
+# Contact - Form - Labels (Bottom Lines)
+--------------------------------------------------------------*/
+
+
+.form__label {
+    position: absolute;
+    bottom: 0px;
+    left: 0%;
+
+    width: 100%;
+    height: 100%;
+
+    border-bottom: solid 1px #9c9c9c;
+
+    pointer-events: none;
+
+    transition: all 0.6s ease;
+}
+
+.form__label-content {
+    position: absolute;
+    left: 0px;
+    bottom: 5px;
+
+    color: var(--primaryTipyngColor);
+    font-family: var(--tipyngTitle);
+    font-weight: 300;
+
+    transition: all 0.2s ease;
+}
+
+/* .form__input:focus+.form__label .form__label-content,
+.form__input:valid+.form__label .form__label-content{
+    transform: translateY(-160%);
+
+    font-size: var(--textSize12);
+}
+
+.form__input:focus+.form__label::after,
+.form__input:valid+.form__label::after{
+    transform: translateX(0%);
+}
+
+.form__textarea:focus+.form__label .form__label-content,
+.form__textarea:valid+.form__label .form__label-content {
+    transform: translateY(-330%);
+
+    font-size: var(--textSize12);
+}
+
+.form__textarea:focus+.form__label::after,
+.form__textarea:valid+.form__label::after {
+    transform: translateX(0%);
+}
+
+.form__textarea:valid+ label::after{
+    border-bottom: solid 2px #7FFF7F;
+}
+
+.form__input:valid+ label::after{
+    border-bottom: solid 2px #7FFF7F;
+} */
+
+
+
+
+/*--------------------------------------------------------------
+@Media Quiery - Portatil
+--------------------------------------------------------------*/
+
+
+@media screen and (max-width: 1440px) {
+
+
+    /*--------------------------------------------------------------
+    # header - Portatil
+    --------------------------------------------------------------*/
+
+
+}
+
+
+/*--------------------------------------------------------------
+@Media Quieries - PC Small Screen
+--------------------------------------------------------------*/
+
+
+@media screen and (max-width: 1200px) {
+
+
+    /*--------------------------------------------------------------
+    # Contact - Form - PC Small Screen
+    --------------------------------------------------------------*/
+
+    .form {
+        width: 75%;
+    }
+
+}
+
+
+/*--------------------------------------------------------------
+@Media Quieries - Tablet
+--------------------------------------------------------------*/
+
+
+@media screen and (max-width: 1024px) {
+
+
+    /*--------------------------------------------------------------
+    # Btn's Principals - Tablet
+    --------------------------------------------------------------*/
+
+
+    .secondary-btn {
+        width: 100%;
+    }
+    
+
+}
+
+
+/*--------------------------------------------------------------
+@Media Quieries - Mobile
+--------------------------------------------------------------*/
+
+
+@media screen and (max-width: 576px) {
+
+
+    /*--------------------------------------------------------------
+    # Contact - Form - Mobile
+    --------------------------------------------------------------*/
+
+
+    .form__group-name-company {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        height: 160px;
+
+        margin-bottom: 0px;
+    }
+
+    .form__name,
+    .form__company {
+        width: 100%;
+    }
+
+    .form__name {
+        margin-right: 0px;
+    }
+    
+    .form__company {
+        margin-top: 20px;
+        margin-left: 0px;
+    }
+
+
+    /*--------------------------------------------------------------
+    # Contact - Form - Checkbox
+    --------------------------------------------------------------*/
+
+
+    .form__checkbox {
+        padding: 9px;
+    }
+
+
+}
